@@ -1,0 +1,117 @@
+/*----- Pantalla Pequeña -----*/
+/*----- Grilla General -----*/
+.wrapper{
+	display: grid;
+	grid-gap: 10px;
+	grid-template-areas: 
+	"header"
+	"nav"
+	"info-estudiantes"
+	"idk"
+	"footer";
+	font-family: 'Roboto', sans-serif;
+}
+/*----- Grilla noticias -----*/
+.info-estudiantes{
+	grid-area: info-estudiantes;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: 
+	"lbl-info-estudiantes"
+	"noticia1"
+	"noticia2"
+	"noticia3"
+	"noticia4";
+}
+.lbl-info-estudiantes{
+	grid-area: lbl-info-estudiantes;
+	text-align: center;
+}
+.noticia1{
+	grid-area: noticia1;
+}
+.noticia2{
+	grid-area: noticia2;
+}
+.noticia3{
+	grid-area: noticia3;
+}
+.noticia4{
+	grid-area: noticia4;
+}
+/*----- Noticias -----*/
+.noticia-header{
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	padding-left:15px ;
+	padding-right: 15px;
+}
+.lbl-noticia{
+	margin: 5px;
+}
+.fecha{
+	margin: 20px 0 0 15px;	
+}
+.img-noticia{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 300px;
+	display: flex;
+	align-items: flex-end;
+}
+/*----- Imágenes por noticia -----*/
+.noticia1 .img-noticia{
+	background-image: url("../images/noticia1.jpg");
+}
+.noticia2 .img-noticia{
+	background-image: url("../images/noticia2.jpg");
+}
+.noticia3 .img-noticia{
+	background-image: url("../images/noticia3.jpg");
+}
+.noticia4 .img-noticia{
+	background-image: url("../images/noticia4.jpg");
+}
+
+.btn-noticia{
+	text-align: center;
+	background-color: #971b2f;
+	color: white;
+	width: 70%;
+	margin: 5px auto 25px auto;
+	padding: 10px 15px 10px 15px;
+	border-radius: 10px;
+	min-width: 100px;
+	max-width: 350px;
+}
+.btn-noticia a{
+	text-decoration: none;
+	color: white;
+}
+@media (min-width:  800px){
+	/*----- Pantalla Grande -----*/
+	/*----- Grilla -----*/
+	.wrapper{
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-areas: 
+		". logo-efpem header header logo-usac ."
+		". nav nav nav nav ."
+		". info-estudiantes info-estudiantes info-estudiantes info-estudiantes ."
+		". idk idk idk idk ."
+		". footer footer footer footer .";
+	}
+	/*----- Grilla noticias -----*/
+	.info-estudiantes{
+		grid-area: info-estudiantes;
+		grid-template-columns: repeat(2, 1fr);
+		display: grid;
+		grid-gap: 20px;
+		grid-template-areas: 
+		"lbl-info-estudiantes lbl-info-estudiantes"
+		"noticia1 noticia2"
+		"noticia3 noticia4";
+	}
+	
+}

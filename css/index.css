@@ -1,0 +1,193 @@
+/*----- Pantalla Pequeña -----*/
+/*----- Grilla -----*/
+.wrapper{
+	display: grid;
+	grid-gap: 10px;
+	grid-template-areas: 
+	"header"
+	"nav"
+	"slider"
+	"mision"
+	"vision"
+	"item1"
+	"item2"
+	"item3"
+	"item4"
+	"idk"
+	"footer";
+	font-family: 'Roboto', sans-serif;
+}
+/*----- Slideshow -----*/
+.slider{
+	grid-area: slider;
+	width: 100%;
+	min-height: 400px;
+}
+.slider img{
+	height: 85vh;
+	object-fit: cover;
+	width: 100%;
+	min-height: 400px;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+/*----- Mision / Vision -----*/
+.mision{
+	grid-area: mision;
+	height: 50vh;
+	background-color: #E5C5C8;
+	min-height: 200px;
+}
+.vision{
+	background-color: #AA9294;
+	grid-area: vision;
+	height: 50vh;
+	min-height: 200px;
+}
+/*----- Contenido -----*/
+.items{
+	padding: 35px;
+	min-height: 225px;
+	text-align: center;
+	display: table;
+}
+.items div{
+	display: table-cell;
+	vertical-align: middle;
+	text-decoration: none;
+}
+.items div h3{
+	margin-top: 0;
+}
+.items a{
+	display: table-cell;
+	vertical-align: middle;
+	text-decoration: none;
+	color: black;
+}
+.item1{
+	grid-area: item1;
+	background: #d7cec7;
+}
+.item2{
+	grid-area: item2;
+	background: #565656;
+}
+.item3{
+	grid-area: item3;
+	background: #76323f;
+}
+.item4{
+	grid-area: item4;
+	background: #c09f80;
+}
+@media (min-width:  800px){
+	/*----- Pantalla Grande -----*/
+	/*----- Grilla -----*/
+	.wrapper{
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-areas: 
+		". logo-efpem header header logo-usac ."
+		". nav nav nav nav ."
+		". slider slider slider slider ."
+		". mision mision vision vision ."
+		". item1 item2 item3 item4 ."
+		". idk idk idk idk ."
+		". footer footer footer footer .";
+	}
+	/*----- Slideshow -----*/
+	.slider img{
+		width: 100%;
+		object-fit: none;
+		height: 385px;
+	}
+	/*----- Mision / Vision -----*/
+	.mision{
+		height: auto;
+		min-height: 175px;
+	}
+	.vision{
+		height: auto;
+		min-height: 175px;
+	}
+	/*----- Contenido -----*/
+	.items{
+		padding: 35px;
+		height: auto;
+	}
+	
+}

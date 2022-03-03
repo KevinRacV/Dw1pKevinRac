@@ -1,0 +1,104 @@
+/*----- Pantalla Pequeña -----*/
+/*----- Grilla General -----*/
+.wrapper{
+	display: grid;
+	grid-gap: 10px;
+	grid-template-areas: 
+	"header"
+	"nav"
+	"carreras"
+	"idk"
+	"footer";
+	font-family: 'Roboto', sans-serif;
+}
+/*----- Grilla carreras -----*/
+.carreras{
+	grid-area: carreras;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-areas: 
+	"profesorados"
+	"carrera1"
+	"carrera2"
+	"carrera3"
+	"carrera4";
+}
+.profesorados{
+	grid-area: profesorados;
+}
+.carrera1{
+	grid-area: carrera1;
+}
+.carrera2{
+	grid-area: carrera2;
+}
+.carrera3{
+	grid-area: carrera3;
+}
+.carrera4{
+	grid-area: carrera4;
+}
+/*----- Carreras -----*/
+.carrera-wrapper{
+	max-height: 250px;
+	display: flex;
+	align-items: center;
+	border: 2px solid black ;
+}
+.img-carrera{
+	width: 	37%;
+	height: 100%;
+	min-width: 	100px;
+	object-fit: cover;
+}
+.content-carrera{
+	margin: 0 5px 0 5px;
+}
+.lbl-carrera{
+	text-align: center;
+}
+.txt-carrera{
+	text-align: center;
+}
+.info-btn{
+	text-align: center;
+	background-color: #971b2f;
+	color: white;
+	width: 70%;
+	margin: 5px auto 25px auto;
+	padding: 10px 15px 10px 15px;
+	border-radius: 10px;
+	min-width: 100px;
+	max-width: 350px;
+}
+.info-btn a{
+	text-decoration: none;
+	color: white;
+}
+
+@media (min-width:  800px){
+	/*----- Pantalla Grande -----*/
+	/*----- Grilla -----*/
+	.wrapper{
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-areas: 
+		". logo-efpem header header logo-usac ."
+		". nav nav nav nav ."
+		". carreras carreras carreras carreras ."
+		". idk idk idk idk ."
+		". footer footer footer footer .";
+	}
+	/*----- Grilla carreras -----*/
+	.carreras{
+		grid-area: carreras;
+		grid-template-columns: repeat(2, 1fr);
+		display: grid;
+		grid-gap: 10px;
+		grid-template-areas: 
+		"profesorados profesorados"
+		"carrera1 carrera2"
+		"carrera3 carrera4";
+	}
+	
+	
+}

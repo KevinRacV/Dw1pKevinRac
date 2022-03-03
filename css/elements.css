@@ -1,0 +1,179 @@
+/*----- Pantalla Pequeña -----*/
+/*----- Encabezado -----*/
+/*----- logos -----*/
+.logo-efpem{
+	grid-area: header;
+	text-align: left;
+	max-width: 48%;
+	z-index: 2;
+}
+.logo-usac{
+	grid-area: header;
+	text-align: right;
+	z-index: 1;
+}
+.logo-efpem img{
+	height: 15vh;
+	max-width: 48%;
+	object-fit: scale-down;
+	min-height: 75px;
+}
+.logo-usac img{
+	height: 15vh;
+	max-width: 48%;
+	object-fit: scale-down;
+	min-height: 75px;
+}
+/*----- Menu -----*/
+.main-nav{
+	grid-area: nav;
+}
+nav a:hover, i:hover {
+  background-color: #63121F;
+}
+nav img{
+	height: 30px;
+}
+nav li {
+  float: unset;
+}
+/*----- Menu pequeño -----*/
+.menu-btn{
+	display: block;
+ 	font-size: 32px;
+ 	color: white;
+ 	background-color: #971b2f;	
+}
+nav .hide-off{
+	display: block;
+}
+nav .hide{
+	display: none;
+}
+/*----- Menu pequeño icono -----*/
+.menu-ico{
+	background-color: #971b2f;
+	padding: 5px 7px 2px 7px;
+	margin-right: 3px;
+	border-radius: 100px;
+	height: 34px;
+}
+/*----- Menu pequeño texto -----*/
+.menu-btn span{
+	font-size: 16px;
+	position: relative;
+	vertical-align: middle;
+	padding-bottom: 7px;
+}
+/*----- Menu pequeño íconos redes -----*/
+.container-social{
+	padding: 0;
+	float: right;
+	position: relative;
+}
+.social-el{
+	background-color: #971b2f;
+	padding: 5px 5px 2px 5px;
+	margin-right: 3px;
+	border-radius: 100px;
+	height: 34px;
+	justify-self: center;
+}
+.social-a{
+	position: absolute;
+	margin: 0px 0px 0px -40px;
+}
+.social-b{
+	position: absolute;
+	margin: 0px 0px 0px -85px;
+}
+.social-c{
+	position: absolute;
+	margin: 0px 0px 0px -130px;
+}
+/*----- Menu grande -----*/
+.menu-lst{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #971b2f;
+}
+/*----- Menu grande página activa -----*/
+nav .active{
+  background-color: #63121F;
+}
+/*----- Menu grande elementos -----*/
+nav li .menu-el {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/*----- Menu grande íconos redes -----*/
+nav .social-li{
+	display: none;
+}
+.social-li a{
+	display: block;
+  color: white;
+  text-align: center;
+  padding: 5px 5px 2px 5px;
+  text-decoration: none;
+  margin-top: 3px;
+  border-radius: 100px;
+}
+/*----- Footer -----*/
+.idk{
+	display: flex;
+	grid-area: idk;
+	width: 100%;
+	justify-content: right;
+}
+.idk div{
+	min-width: 125px;
+}
+.main-footer{
+	grid-area: footer;
+	background: #971b2f;
+	text-align: center;
+	color: white;
+}
+@media (min-width:  800px){
+	/*----- Pantalla Grande -----*/
+	/*----- Encabezado -----*/
+	/*----- logos -----*/
+	.logo-efpem{
+		grid-area: logo-efpem;
+		text-align: left;
+	}
+	.logo-usac{
+		grid-area: logo-usac;
+		text-align: right;
+	}
+	.logo-efpem img{
+		height: 75px;
+		max-width: unset;
+	}
+	.logo-usac img{
+		height: 75px;
+		max-width: unset;
+	}
+	/*----- Menu pequeño-----*/
+	.menu-btn{
+		display: none;
+	}
+	/*----- Menu grande -----*/
+	nav .hide{
+		display: block;
+	}
+	nav li {
+	  float: left;
+	}
+	/*----- Menu grande íconos redes -----*/
+	nav .social-li{
+	  float: right;
+	  display: unset;
+	}
+}
